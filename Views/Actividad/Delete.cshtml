@@ -1,0 +1,33 @@
+﻿@model ProyectoMod10.Models.Actividad
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Estas seguro que quieres eliminarlo?</h3>
+<div>
+    <h4>Actividad</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Título)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Título)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" name="Id" asp-for="Id" />
+        <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+        @Html.ActionLink("Volver", "Index", new { id = Model.Id }, new { @class = "btn btn-outline-secondary" })
+    </form>
+</div>

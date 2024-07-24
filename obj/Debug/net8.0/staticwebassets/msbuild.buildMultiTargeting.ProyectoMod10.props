@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\ProyectoMod10.props" />
+</Project>

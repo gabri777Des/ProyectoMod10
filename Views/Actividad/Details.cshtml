@@ -1,0 +1,27 @@
+﻿@model ProyectoMod10.Models.Actividad
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div>
+    <h4>Lista de Actividades</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Título)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Título)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Tarea)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Tarea)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Index" class="btn btn-outline-secondary">Volver</a>
+</div>

@@ -1,0 +1,26 @@
+﻿@model IEnumerable<ProyectoMod10.Models.Actividad>
+<link rel="stylesheet" href="~/css/styles.css"/>
+<br />
+<p>
+    <a asp-action="Create" class="btn btn-outline-primary">Nuevo Actividad</a>
+</p>
+<br />
+<h2>Tarjetas</h2>
+<div>
+    @foreach (var actividad in Model)
+    {
+        <div class="cards">
+            <div class="card">
+                <div class="content">
+                    <h3>@actividad.Título</h3>
+                    <td>
+                        @Html.ActionLink("Editar", "Edit", new { id = actividad.Id }, new { @class = "btn btn-outline-info" }) |
+                        @Html.ActionLink("Ver", "Details", new { id = actividad.Id }, new { @class = "btn btn-outline-secondary" }) |
+                        @Html.ActionLink("Eliminar", "Delete", new { id = actividad.Id }, new { @class = "btn btn-outline-danger" })
+                    </td>
+                </div>
+            </div>
+        </div>
+        
+    }
+</div>
